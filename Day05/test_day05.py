@@ -44,8 +44,13 @@ class TestDay05(unittest.TestCase):
     def test_part1(self):
         self.assertEqual(35, part_1(data))
 
+    def test_find_largest_in_list_less_than_num(self):
+        self.assertEqual(3, Almanac.find_largest_in_list_less_than_num(3, [1,2,3,4]))
+        self.assertEqual(4, Almanac.find_largest_in_list_less_than_num(4, [1,2,3,4]))
+        self.assertEqual(4, Almanac.find_largest_in_list_less_than_num(6, [1,2,3,4]))
+
     def test_part2(self):
-        self.assertEqual(0, part_2(data))
+        self.assertEqual(46, part_2(data))
 
 
 if __name__ == '__main__':
