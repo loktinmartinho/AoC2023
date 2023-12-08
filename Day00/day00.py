@@ -1,4 +1,6 @@
 import numpy as np
+import re
+
 
 def part_1(data: str) -> int:
     total = 0
@@ -10,5 +12,5 @@ def part_2(data: str) -> int:
 
 
 if __name__ == '__main__':
-    print(part_1(open('data.txt').read()))
-    print(part_2(open('data.txt').read()))
+    print('Part 1 answer: ', part_1(open('data.txt').read()))
+    print('Part 2 answer: ', part_2(open('data.txt').read()))
