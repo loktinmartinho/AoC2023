@@ -21,6 +21,19 @@ data2 = dedent("""\
         BBB = (AAA, ZZZ)
         ZZZ = (ZZZ, ZZZ)""")
 
+data3 = dedent("""\
+        LR
+
+        11A = (11B, XXX)
+        11B = (XXX, 11Z)
+        11Z = (11B, XXX)
+        22A = (22B, XXX)
+        22B = (22C, 22C)
+        22C = (22Z, 22Z)
+        22C = (22Z, 22Z)
+        22Z = (22B, 22B)
+        XXX = (XXX, XXX)""")
+
 
 class TestDay08(unittest.TestCase):
 
@@ -29,7 +42,7 @@ class TestDay08(unittest.TestCase):
         self.assertEqual(6, part_1(data2))
 
     def test_part2(self):
-        self.assertEqual(None, part_2(data1))
+        self.assertEqual(6, part_2(data3))
 
 
 if __name__ == '__main__':
